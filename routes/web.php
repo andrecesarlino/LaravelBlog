@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', function () {
+    return "Inicio de tudo";
+});
+
+Route::get('/produtos', 'ProdutoController@lista');
+
+Route::get('/produtos/mostra', 'ProdutoController@mostra');
