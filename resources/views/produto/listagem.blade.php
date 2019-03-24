@@ -29,7 +29,11 @@
                     <td>{{$p->valor}}</td>
                     <td>{{$p->descricao}}</td>
                     <td>{{$p->quantidade}}</td>
-                    <td><a href="/produtos/mostra/{{$p->id}}"><i class="fas fa-binoculars"></i></a></td>
+                    <td>
+                        <a href="/produtos/mostra/{{$p->id}}"><i class="fas fa-binoculars"></i></a>
+                        <a href="/produtos/novo"><i class="fas fa-align-justify"></i></a>
+
+                    </td>
 
                 </tr>
 
