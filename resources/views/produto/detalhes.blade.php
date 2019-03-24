@@ -5,16 +5,16 @@
 
     <ul>
         <li>
-            <b>Nome: </b> {{$p->nome or 'Nenhum nome informado'}} ?>
+            <b>Nome: </b> {{$p->nome}}
         </li>
         <li>
-            <b>Valor: </b> R$ {{$p->valor or 'Nenhum valor informado'}}
+            <b>Valor: </b> R$ {{$p->valor}}
         </li>
         <li>
-            <b>Descrição: </b> {{$p->descricao or 'Nenhuma descrição informada'}}
+            <b>Descrição: </b> {{$p->descricao}}
         </li>
         <li>
-            <b>Quantidade: </b> {{$p->quantidade or 'Nenhuma quantidade informada'}}
+            <b>Quantidade: </b> {{$p->quantidade or "Nenhuma quantidade informada"}}
         </li>
     </ul>
 @stop
