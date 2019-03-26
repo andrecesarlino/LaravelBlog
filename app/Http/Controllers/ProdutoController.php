@@ -50,7 +50,7 @@ class ProdutoController extends Controller
     public function novo() {
         return view('produto.formulario');
     }
-
+/*
     public function adiciona() {
         $nome = Request::input('nome');
         $descricao = Request::input('descricao');
@@ -62,4 +62,15 @@ class ProdutoController extends Controller
 
         return view('produto.adicionado')->with('nome',$nome);
     }
+
+*/
+    public function adiciona() {
+        $nome = Request::all();
+
+        return var_dump($nome);
+    }
+
+
+
+
 }
