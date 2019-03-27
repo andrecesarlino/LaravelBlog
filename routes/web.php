@@ -11,13 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    return "Inicio de tudo";
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/produtos', 'ProdutoController@lista');
 
@@ -29,4 +23,18 @@ Route::get('/produtos/novo', 'ProdutoController@novo');
 
 Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
-Route::get('/produtos/novo', 'ProdutoController@novo');
+Route::get('/produtos', [
+    'as' => 'apelido',
+    'uses' => 'ProdutoController@lista'
+]);
+Route::get('/produtos/listaJson', 'ProdutoController@listaJson');
+
+Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
+
+
+//Route::get('/produtos/altera/{id}', 'ProdutoController@alterar');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

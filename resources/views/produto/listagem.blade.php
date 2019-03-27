@@ -10,7 +10,8 @@
             <td>Valor</td>
             <td>Descrição</td>
             <td>Quantidade</td>
-            <td>Ações</td>
+            <td>View</td>
+            <td>Excluir</td>
 
         </tr>
 
@@ -31,8 +32,9 @@
                     <td>{{$p->quantidade}}</td>
                     <td>
                         <a href="/produtos/mostra/{{$p->id}}"><i class="fas fa-binoculars"></i></a>
-                        <a href="/produtos/novo"><i class="fas fa-align-justify"></i></a>
-
+                        </td>
+                    <td>
+                        <a href="{{action('ProdutoController@remove',$p->id)}}"><i class="fas fa-trash"></i></a>
                     </td>
 
                 </tr>
@@ -43,11 +45,19 @@
 
         @endif
 
-        <h3>
+        <h4>
 
             <div class="alert alert-danger" role="alert">Um ou menos itens no estoque</div>
 
-        </h3>
+        </h4>
+
+        <br>
+        @if(old('nome'))
+            <div class="alert alert-success">
+                <strong>Sucesso!</strong> o produto {{old('nome')}} foi adicionado com sucesso
+
+            </div>
+        @endif
 
     </table>
 @stop

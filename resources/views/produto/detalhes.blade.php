@@ -14,7 +14,7 @@
             <b>Descrição: </b> {{$p->descricao}}
         </li>
         <li>
-            <b>Quantidade: </b> {{$p->quantidade or "Nenhuma quantidade informada"}}
+            <b>Quantidade: </b> {{$p->quantidade}}
         </li>
     </ul>
 @stop
